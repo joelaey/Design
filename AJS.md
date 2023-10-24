@@ -144,3 +144,6 @@ Teknologi, Library dan Framework yang digunakan dalam pembuatan aplikasi ini ada
 
 ### 6. User Experience (UX) Design
   
+![UX](https://github.com/joelaey/Design/blob/main/96663AB4-FE13-4E09-99B5-9F9F8DF104CB.JPEG)
+
+Design ini adalah low fidelity design yang dimana design yang paling sederhana untuk dibuat, design ini dibuat di aplikasi Notes di iPhone.
