@@ -48,6 +48,17 @@ Aplikasi ini dirancang untuk menjadi platform yang memungkinkan pengguna untuk:
   - Warna : Putih , Biru Tua, Gold Warna yang terkesan profesional dan memberikan kesan mewah.
   
   - Inspirasi Design :
+ 
+![Inspirasi Design](https://github.com/joelaey/Design/blob/main/Screenshot%202023-10-24%20at%2020.37.13.png)
+
+
+
+
+
+### 2. User Story
+
+
+
   
   
 
