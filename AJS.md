@@ -41,7 +41,7 @@ Aplikasi ini dirancang untuk menjadi platform yang memungkinkan pengguna untuk:
   
   - Seorang yang membutuhkan jasa sewa Sound System atau Hiburan
 
-- UI/UX :
+- User Interface :
   
   - Mudah dan Sederhana.
   
@@ -56,10 +56,91 @@ Aplikasi ini dirancang untuk menjadi platform yang memungkinkan pengguna untuk:
 
 
 ### 2. User Story
+Tahap ini menjelaskan tentang prioritas antara Admin, Pekerja dan Customer untuk  mewujudkan fitur-fitur yang sudah dirancanakan pada aplikasi yang akan dibuat.
 
-
-
+Sebagai | Saya ingin bisa | Sehingga | Prioritas
+---|------|------|---
+Customer | Melakukan pemesanan atau pembelian | Bisa Memesan Sound System | ⭐️⭐️⭐️⭐️⭐️
+Customer | Mengatur tanggal pemesanan | Bisa memesan di tanggal yang diinginkan | ⭐️⭐️⭐️⭐️⭐️
+Customer | Mengatur alamat tujuan pemesanan | Bisa memesan dengan alamat yang benar dan tepat | ⭐️⭐️⭐️⭐️⭐️
+Customer | Melihat status pesanan | Bisa mengetahui hal yang terjadi pada pesanan saya | ⭐️⭐️⭐️⭐️
+Admin | Melihat detail per tanggal | Bisa mengetahui apakah di tanggal tersebut ada acara dan jikalau ada itu dimana | ⭐️⭐️⭐️⭐️⭐️
+Admin | Melihat detail pesanan | Bisa mengatur pemberangkatan pesanan | ⭐️⭐️⭐️⭐️⭐️
+Admin | Mengatur user pekerja | Bisa mengkondisikan pekerja terhadap pesanan pelanggan | ⭐️⭐️⭐️⭐️⭐️
+Pekerja | Melihat jadwal dalam setiap tanggal | Bisa mengetahui kapan harus bekerja | ⭐️⭐️⭐️⭐️⭐️
+Pekerja | Melihat alamat pada jadwal yang sudah ditentukan | Diantarkan ke alamat yang tepat | ⭐️⭐️⭐️⭐️⭐️
   
+### 3. Struktur Data
+
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ PESANAN : membuat
+    CUSTOMER ||--o{ PESANAN : melihat
+    CUSTOMER{
+      string nama_costumer
+      int nomor_telpon_costumer
+    }
+    ADMIN ||--o{ PESANAN : melihat
+    ADMIN ||--o{ JADWAL : membuat
+    ADMIN ||--o{ PEKERJA : mengatur
+    ADMIN ||--o{ CUSTOMER : menghubungi
+    ADMIN{
+      string nama_admin
+      string email
+      string password
+    }
+    PEKERJA ||--o{ JADWAL : melihat
+    PEKERJA ||--o{ CUSTOMER : menghubungi
+    PEKERJA{
+      string nama_pekerja
+      string email
+      string password
+    }
+    PESANAN{
+    string nama_customer
+      int nomor_telpon_costumer
+      int nomor_pesanan
+      datetime tanggal_pesanan
+      string alamat_pesanan
+    }
+    JADWAL{
+      string nama_customer
+      int nomor_telpon_costumer
+      datetime tanggal_pesanan
+      string alamat_pesanan
+    }
+```
+
+### 4. Arsitektur Berbasis Client-Server
+
+Berikut adalah arsitektur dari teknologi - teknologi yang digunakan dalam perancangan / pembuatan aplikasi ini :
+```mermaid
+  flowchart TD
+    subgraph cloud
+         A[Database : MySQL] <-->B[Aplikasi Web Backend : JavaScript - Node JS]
+         B <--> C[Web Server : JavaScript - Node JS]
+    end
+         C <-->D[Aplikasi Android & iPhone : React Native]
+```
+
+### 5. Teknologi, Library dan Framework
+
+Teknologi, Library dan Framework yang digunakan dalam pembuatan aplikasi ini adalah sebagai berikut :
+
+- React Native: React Native adalah teknologi utama yang dibutuhkan untuk mengembangkan aplikasi seluler cross-platform. Ini memungkinkan untuk membuat aplikasi Android dan iOS dengan menggunakan JavaScript dan React.
   
+- Node.js: Node.js adalah teknologi server-side yang akan digunakan untuk mengelola logika aplikasi, menangani permintaan dari aplikasi seluler, dan berinteraksi dengan database MySQL.
+  
+- MySQL: MySQL adalah sistem manajemen basis data (Database) relasional yang akan digunakan untuk menyimpan dan mengelola data aplikasi, seperti informasi admin, pekerja, customer, pesanan, dan jadwal.
+  
+- JavaScript: JavaScript adalah bahasa pemrograman yang digunakan untuk mengembangkan aplikasi React Native dan server aplikasi Node.js. Ini adalah bahasa yang digunakan di seluruh tumpuan teknologi ini.
+  
+- React Native Elements atau NativeBase: Library komponen UI yang dapat membantu dalam membangun tampilan aplikasi dengan mudah. Ini menyediakan komponen siap pakai seperti tombol, form, dan lainnya.
+  
+- Express.js: Framework server web Node.js yang akan membantu dalam mengembangkan API RESTful untuk berkomunikasi antara aplikasi React Native dan database MySQL.
+  
+- Axios: Library yang berguna untuk melakukan permintaan HTTP dari aplikasi React Native ke server Node.js, atau lebih sederhananya Axios adalah library yang digunakan untuk menghubungkan backend ke frontend dan sebaliknya.
 
 
+### 6. User Experience (UX) Design
+  
