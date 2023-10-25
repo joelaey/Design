@@ -116,11 +116,14 @@ erDiagram
 Berikut adalah arsitektur dari teknologi - teknologi yang digunakan dalam perancangan / pembuatan aplikasi ini :
 ```mermaid
   flowchart TD
-    subgraph cloud
-         A[Database : MySQL] <-->B[Aplikasi Web Backend : JavaScript - Node JS]
+    subgraph server
+         A[Database : MySQL] <-->B[Backend : JavaScript - Node JS]
          B <--> C[Web Server : JavaScript - Node JS]
     end
+
+    subgraph client
          C <-->D[Aplikasi Android & iPhone : React Native]
+    end
 ```
 
 ### 5. Teknologi, Library dan Framework
