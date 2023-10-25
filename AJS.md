@@ -105,7 +105,7 @@ Berikut adalah arsitektur dari teknologi - teknologi yang digunakan dalam peranc
   flowchart TD
     subgraph server
          A[Database : MySQL] <-->B[Backend : JavaScript - Node JS]
-         B <--> C[Web Server : JavaScript - Node JS]
+         B <--> C[Server : JavaScript - Node JS]
     end
 
     subgraph client
