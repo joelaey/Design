@@ -3,29 +3,11 @@ Muhammad Agung Julyansyah , Oct 15 2023
 
 ### 1.1. Latar Belakang
 
-Aplikasi ini adalah solusi yang merespon kebutuhan masyarakat yang ingin dengan mudah memesan atau menyewa jasa sound system untuk berbagai jenis acara seperti pesta ulang tahun, konser kecil, konferensi, pernikahan, dan acara lainnya. Beberapa latar belakang penting yang mendorong pembuatan aplikasi ini dapat mencakup:
-
-- Kemudahan dalam proses pemesanan.
-
-- Peningkatan minat pelanggan untuk memesan sound system karena pemesanannya yang mudah.
-
-- Meningkatkan kepercayaan pelanggan karena terlihat lebih profesional.
+Aplikasi ini adalah solusi yang merespon kebutuhan masyarakat yang ingin dengan mudah memesan atau menyewa jasa sound system untuk berbagai jenis acara seperti pesta ulang tahun, konser kecil, konferensi, pernikahan, dan acara lainnya. Latar belakang yang mendorong pembuatan aplikasi ini karena begitu banyaknya oknum oknum yang tidak jujur, seperti menipu dan lain lain. Adanya aplikasi ini menjadi sebuah solusi untuk memesan jasa Sound System dan Hiburan dengan aman, mudah, dan nyaman.
 
 ### 1.2. Deskripsi
 
-Aplikasi ini dirancang untuk menjadi platform yang memungkinkan pengguna untuk:
-
-- Memesan jasa sound system untuk tanggal dan waktu tertentu.
-  
-- Melakukan pembayaran dengan aman, baik melalui kartu kredit atau metode pembayaran lainnya yang didukung.
-  
-- Melacak status pesanan mereka dan menerima notifikasi penting.
-  
-- Memberikan ulasan dan umpan balik tentang penyedia jasa setelah acara selesai.
-  
-- Memberikan informasi kepada pelanggan yang lebih detail dan rinci.
-  
-- Memberikan informasi kepada pekerja sound system.
+Aplikasi ini dirancang untuk menjadi platform yang memungkinkan pengguna untuk, Memesan jasa sound system untuk tanggal dan waktu tertentu, Melakukan pembayaran dengan aman, baik melalui kartu kredit atau metode pembayaran lainnya yang didukung, Melacak status pesanan mereka dan menerima notifikasi penting, Memberikan ulasan dan umpan balik tentang penyedia jasa setelah acara selesai, Memberikan informasi kepada pelanggan yang lebih detail dan rinci dan Memberikan informasi kepada pekerja sound system.
 
 ### 1.3. Branding
 
