@@ -59,6 +59,7 @@ erDiagram
     CUSTOMER ||--o{ PESANAN : membuat
     CUSTOMER ||--o{ PESANAN : melihat
     CUSTOMER{
+      int id_customer
       string nama_costumer
       int nomor_telpon_costumer
     }
@@ -67,6 +68,7 @@ erDiagram
     ADMIN ||--o{ PEKERJA : mengatur
     ADMIN ||--o{ CUSTOMER : menghubungi
     ADMIN{
+      int id_admin
       string nama_admin
       string email
       string password
@@ -74,18 +76,21 @@ erDiagram
     PEKERJA ||--o{ JADWAL : melihat
     PEKERJA ||--o{ CUSTOMER : menghubungi
     PEKERJA{
+      int id_pekerja
       string nama_pekerja
       string email
       string password
     }
     PESANAN{
-    string nama_customer
+      int id_pesanan
+      string nama_customer
       int nomor_telpon_costumer
       int nomor_pesanan
       datetime tanggal_pesanan
       string alamat_pesanan
     }
     JADWAL{
+      int id_jadwal
       string nama_customer
       int nomor_telpon_costumer
       datetime tanggal_pesanan
