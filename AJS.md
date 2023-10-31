@@ -1,4 +1,4 @@
-# Membuat Aplikasi Sewa Jasa Sound System Menggunakan React Native, Node JS, Express dan MySQL
+# Membuat Aplikasi Sewa Jasa Sound System Menggunakan Flutter, Dart, Node JS, Express dan MySQL
 Muhammad Agung Julyansyah , Oct 15 2023
 
 ### 1.1. Latar Belakang
@@ -102,34 +102,43 @@ erDiagram
 
 Berikut adalah arsitektur dari teknologi - teknologi yang digunakan dalam perancangan / pembuatan aplikasi ini :
 ```mermaid
-  flowchart TD
-    subgraph server
-         A[Database : MySQL] <-->B[Backend : JavaScript - Node JS]
-         B <--> C[Server : JavaScript - Node JS]
+
+    flowchart TD
+
+     subgraph server
+         A[Database : MySQL]
+    end
+
+    subgraph infrastuktur
+         A <--> B[Backend : Node JS] <--> C[Server : Node Js]
     end
 
     subgraph client
-         C <-->D[Aplikasi Android & iPhone : React Native]
+         C <--> D[Aplikasi Android & iPhone : Dart & Flutter]
     end
+
 ```
 
 ### 5. Teknologi, Library dan Framework
 
 Teknologi, Library dan Framework yang digunakan dalam pembuatan aplikasi ini adalah sebagai berikut :
 
-- React Native: React Native adalah teknologi utama yang dibutuhkan untuk mengembangkan aplikasi seluler cross-platform. Ini memungkinkan untuk membuat aplikasi Android dan iOS dengan menggunakan JavaScript dan React.
+- Bahasa Pemrograman: Dart digunakan di sisi klien (frontend) dengan menggunakan Flutter. Node.js digunakan di sisi server (backend) untuk mengelola aplikasi ini.
+
+- Framework Client: Flutter adalah kerangka kerja yang digunakan untuk mengembangkan aplikasi Android dan iOS. Ini memungkinkan pengembangan aplikasi seluler cross-platform dengan menggunakan bahasa Dart.
+
+- Framework Server: Node.js digunakan sebagai framework server di sisi backend.
   
-- Node.js: Node.js adalah teknologi server-side yang akan digunakan untuk mengelola logika aplikasi, menangani permintaan dari aplikasi seluler, dan berinteraksi dengan database MySQL.
+- Database: MySQL digunakan sebagai sistem manajemen basis data relasional untuk menyimpan dan mengelola data aplikasi.
+
+- Library Tambahan untuk Flutter (Sisi Client): Library http dan dio membantu dalam melakukan permintaan HTTP dari aplikasi Flutter ke server Node.js. Library provider dan flutter_bloc mempermudah pengelolaan aplikasi dan data. Dan library shared_preferences dan flutter_secure_storage membantu dalam penyimpanan data lokal seperti preferensi pengguna dan informasi sensitif secara aman.
+
+- Library Tambahan untuk Node.js (Sisi Server): Library express.js untuk mengembangkan API RESTful yang kuat. Library mysql2 membantu berinteraksi dengan database MySQL. Library axios untuk membuat permintaan HTTP dari server Node.js ke klien Flutter. Dan jsonwebtoken untuk mengimplementasikan otentikasi berbasis token, karena saya disini menggunakan multi-role login yang dimana ada Admin, Pekerja, dan User.
+
+- Infrastruktur Hosting: Heroku, platform hosting yang akan digunakan untuk menjalankan server Node.js. Seperti menyediakan infrastruktur, manajemen server, dan sumber daya yang dibutuhkan. Anda dapat mendeploy dan mengelola aplikasi Node.js.
   
-- MySQL: MySQL adalah sistem manajemen basis data (Database) relasional yang akan digunakan untuk menyimpan dan mengelola data aplikasi, seperti informasi admin, pekerja, customer, pesanan, dan jadwal.
-  
-- JavaScript: JavaScript adalah bahasa pemrograman yang digunakan untuk mengembangkan aplikasi React Native dan server aplikasi Node.js. Ini adalah bahasa yang digunakan di seluruh tumpuan teknologi ini.
-  
-- React Native Elements atau NativeBase: Library komponen UI yang dapat membantu dalam membangun tampilan aplikasi dengan mudah. Ini menyediakan komponen siap pakai seperti tombol, form, dan lainnya.
-  
-- Express.js: Framework server web Node.js yang akan membantu dalam mengembangkan API RESTful untuk berkomunikasi antara aplikasi React Native dan database MySQL.
-  
-- Axios: Library yang berguna untuk melakukan permintaan HTTP dari aplikasi React Native ke server Node.js, atau lebih sederhananya Axios adalah library yang digunakan untuk menghubungkan backend ke frontend dan sebaliknya.
+- Perangkat Lunak Server: Nginx, server web dan proxy reverse yang akan mengatur lalu lintas HTTP ke aplikasi Node.js. Ini mengelola penyeimbangan beban, caching, dan lapisan keamanan. Nginx ini juga bisa membantu meningkatkan kinerja dan keamanan aplikasi.
+
 
 
 ### 6. User Experience (UX) Design
@@ -137,3 +146,26 @@ Teknologi, Library dan Framework yang digunakan dalam pembuatan aplikasi ini ada
 ![UX](https://github.com/joelaey/Design/blob/main/96663AB4-FE13-4E09-99B5-9F9F8DF104CB.JPEG)
 
 Design ini adalah low fidelity design yang dimana design yang paling sederhana untuk dibuat, design ini dibuat di aplikasi Notes di iPhone.
+
+
+### 7. Demonstrasi video
+
+-
+
+### 8. Bagaimana mesin komputasi dan sistem operasi berperan dalam produk teknologi informasi ?
+
+Dalam produk teknologi informasi ini, mesin komputasi (Laptop) dan sistem operasi (MacOS) berperan sebagai infrastruktur dasar. Mesin komputasi berfungsi sebagai server yang menjalankan aplikasi backend dan menyimpan basis data MySQL. Sistem operasi digunakan untuk mengelola sumber daya komputer, menjalankan perangkat lunak, dan memproses permintaan dari aplikasi Flutter. Selain itu, sistem operasi juga berperan dalam keamanan dan manajemen sumber daya server. Intinya, mesin komputasi atau laptop yang digunakan ini sederhananya berperan sebagai pusat aplikasi dari mulai percancangan, pembuatan, dan pengelolaan semua sumber daya ataupun data yang diperlukan di aplikasi mobile yang digunakan client, jadi bisa dikatakan laptop yang digunakan ini sebagai server dan aplikasi mobile nya sebagai client.
+
+### 9. Bagaimana algoritma, struktur data, dan bahasa pemrograman berperan dalam produk teknologi informasimu ?
+
+Algoritma digunakan dalam aplikasi untuk mengatur logika bisnis, algoritma pencarian, manajemen pesanan, dan pencarian data. Struktur data digunakan untuk menyimpan informasi pelanggan, pesanan, jadwal, dan sebagainya dalam basis data MySQL. Bahasa pemrograman Dart digunakan untuk mengembangkan aplikasi Flutter di sisi client. Algoritma dan struktur data berperan dalam efisiensi dan kehandalan aplikasi, sedangkan bahasa pemrograman berperan untuk memerintah komputer untuk menjalankan fungsi-fungsi atau algoritma yang dibutuhkan dalam aplikasi ini.
+
+### 10. Bagaimana metode pengembangan perangkat lunak / Software Development Life Cycle berperan dalam produk teknologi informasimu ?
+
+Metode pengembangan perangkat lunak atau Software Development Life Cycle adalah kerangka kerja yang digunakan untuk mengelola siklus  pengembangan perangkat lunak. Dalam produk ini, SDLC berperan dalam mengatur tahap-tahap pengembangan aplikasi, mulai dari perencanaan, analisis, desain, implementasi, pengujian, dan pemeliharaan. SDLC memastikan bahwa pengembangan aplikasi berjalan secara terstruktur dan sesuai dengan kebutuhan pengguna.
+
+### 11. Bagaimana database / sistem basis data berperan dalam produk teknologi informasimu ?
+
+Database MySQL berperan sebagai tempat penyimpanan semua data yang diperlukan oleh aplikasi, seperti informasi pelanggan, pesanan, jadwal, dan detail lainnya. Sistem basis data berperan dalam mengatur, mengelola, dan menyediakan akses data. Hal ini memungkinkan aplikasi untuk CRUD dengan efisien. Database juga berperan dalam menjaga konsistensi dan kerapihan data, serta memungkinkan pencarian dan pengambilan data yang cepat.
+
+
