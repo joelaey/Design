@@ -49,6 +49,7 @@ Customer | Melihat status pesanan | Bisa mengetahui hal yang terjadi pada pesana
 Admin | Melihat detail per tanggal | Bisa mengetahui apakah di tanggal tersebut ada acara dan jikalau ada itu dimana | ⭐️⭐️⭐️⭐️⭐️
 Admin | Melihat detail pesanan | Bisa mengatur pemberangkatan pesanan | ⭐️⭐️⭐️⭐️⭐️
 Admin | Mengatur user pekerja | Bisa mengkondisikan pekerja terhadap pesanan pelanggan | ⭐️⭐️⭐️⭐️⭐️
+Admin | Membuat jadwal manggung | Pekerja bisa mengetahui kapan ia harus pergi dan kemana tujuannya | ⭐️⭐️⭐️⭐️⭐️
 Pekerja | Melihat jadwal dalam setiap tanggal | Bisa mengetahui kapan harus bekerja | ⭐️⭐️⭐️⭐️⭐️
 Pekerja | Melihat alamat pada jadwal yang sudah ditentukan | Diantarkan ke alamat yang tepat | ⭐️⭐️⭐️⭐️⭐️
   
@@ -58,6 +59,7 @@ Pekerja | Melihat alamat pada jadwal yang sudah ditentukan | Diantarkan ke alama
 erDiagram
     CUSTOMER ||--o{ PESANAN : membuat
     CUSTOMER ||--o{ PESANAN : melihat
+    CUSTOMER ||--o{ ADMIN : menghubungi
     CUSTOMER{
       int id_customer
       string nama_costumer
