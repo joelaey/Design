@@ -112,11 +112,11 @@ Berikut adalah arsitektur dari teknologi - teknologi yang digunakan dalam peranc
     end
 
     subgraph infrastuktur
-         A <--> B[Backend : Node JS] <--> C[Server : Node Js]
+         A <--> B[Server : Node JS] <--> C[Backend : Dart] <--> D[Frontend : Dart]
     end
 
     subgraph client
-         C <--> D[Aplikasi Android & iPhone : Dart & Flutter]
+         D <--> E[Aplikasi Android & iPhone : Flutter]
     end
 
 ```
