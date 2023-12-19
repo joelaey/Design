@@ -152,7 +152,7 @@ Design ini adalah low fidelity design yang dimana design yang paling sederhana u
 
 ### 7. Demonstrasi video
 
--
+https://www.youtube.com/watch?v=Qfenvn-9S34
 
 ### 8. Bagaimana mesin komputasi dan sistem operasi berperan dalam produk teknologi informasi ?
 
